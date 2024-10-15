@@ -26,9 +26,9 @@ const CartScreen = () => {
     dispatch(addToCart({ ...product, qty }));
   };
 
-//   const removeFromCartHandler = (id) => {
-//     dispatch(removeFromCart(id));
-//   };
+  const removeFromCartHandler = (id) => {
+    dispatch(removeFromCart(id));
+  };
 
   const checkoutHandler = () => {
     navigate('/login?redirect=/shipping');
@@ -73,9 +73,9 @@ const CartScreen = () => {
                     <Button
                       type='button'
                       variant='light'
-                    //   onClick={() => removeFromCartHandler(item._id)
+                      onClick={() => removeFromCartHandler(item._id)
                         
-                    //   }
+                      }
                     >
                       <FaTrash />
                     </Button>
